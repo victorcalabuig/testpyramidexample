@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.junit.Test;
 import rxdemo.vendordata.EDrugClassification;
 
+import static org.junit.Assert.fail;
+
 public class DispensableDrugShould {
 
    // testing a change.
@@ -17,6 +19,7 @@ public class DispensableDrugShould {
       Assert.assertEquals(2, drug.getClassifications().size());
       Assert.assertTrue(drug.getClassifications().contains(EDrugClassification.ANALGESIC));
       Assert.assertTrue(drug.getClassifications().contains(EDrugClassification.ANTIANXIETY));
+      fail("Force build failure");
    }
 
 }
